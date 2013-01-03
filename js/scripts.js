@@ -10,7 +10,9 @@ $(".navli").hover(
 
 var students=["Lee Amlung","Clayton Amshoff","Evan Blanford","Spencer Fulkerson","Mark Gumbel","Blake Isaacs","Miles Lee","Chase McGehee","Jack Minogue","Josh Osbourne","Clay Schaefer","Jeb Schilling","Patrick Schwarz","Austin Sullivan","Joe Urda","Andrew White","Karsen Woods","Dean Yoder"];
 
-var teamMembers = " <input type='text' class='member1'> <br> <input type='text' class='member2'> <br> <input type='text' class='member3'> <br> <input type='text' class='member4'> <br> ";
+var teamMembers = " <input type='text' class='member1' > <br> <input type='text' class='member2'> <br> <input type='text' class='member3'> <br> <input type='text' class='member4'> <br> ";
+
+var lastUsed;
 
 function teamLeader (leaderNumber,className){
 	leaderNumber = students[Math.floor( Math.random() * students.length )];
@@ -49,9 +51,9 @@ $('.leader5button').click( function () {
 
 
 function infoBar() {
-	$('.info').empty();
+	$('.infoitem').remove();
 	for (var i = 0; i < students.length; i++) {
-		$(".info").append('<div class="' + students[i] + ' infoitem btn" onclick="students.splice(' + i + ', 1); infoBar(); "><i class="icon-remove-sign pull-left"></i>' + students[i] + '</div>');
+		$(".info").append('<div class="' + students[i] + ' infoitem btn ' + i + '" onclick="students.splice(' + i + ', 1); infoBar(); lastUsed = this"><i class="icon-remove-sign pull-left"></i>' + students[i] + '</div>');
 	}
 }
 
@@ -80,7 +82,7 @@ $('.previous').click(
 		current.removeClass('activeChoice');  // move the current class
 		previous.addClass('activeChoice');
 		$('.activeChoice input').filter(function() { return this.value != ""; }).last().focus();
+		$('.info').append( lastUsed );
 	});
-
 
 infoBar();
