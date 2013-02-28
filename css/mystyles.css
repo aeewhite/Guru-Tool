@@ -72,55 +72,120 @@
 	background-color: Transparent;
 	color: #000;
 }
+
 .text-center {
-	text-align:center;
+	text-align: center;
 }
+
 .teamscore {
-	font-size:150%;
-	display:inline-block;
-	padding-top:10px;
+	font-size: 150%;
+	display: inline-block;
+	padding-top: 10px;
 }
+
 .team .raise {
-	width:30%;
-	text-align:center;
-	padding:10px 10px 10px 10px;
-	float:right;
+	width: 30%;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	float: right;
 }
+
 .team .lower {
-	width:30%;
-	padding:10px;
-	float:left;
+	width: 30%;
+	padding: 10px;
+	float: left;
 }
+
 .boomdaddy {
-	margin-top:30px;
-}
-.flash{
-
-  -moz-animation: flash .2s ease-out;
-  -moz-animation-iteration-count: 1;
-
-  -webkit-animation: flash .2s ease-out;
-  -webkit-animation-iteration-count: 1;
-
-  -ms-animation: flash .2s ease-out;
-  -ms-animation-iteration-count: 1;
-
+	margin-top: 30px;
 }
 
-@-webkit-keyframes flash {
-    0% { background-color:none;}
-    50% { background-color:red;}        
-    100% {background-color:none;}
+.flash {
+	-webkit-animation: flash .2s ease-out;
+	-moz-animation: flash .2s ease-out;
+	-ms-animation: flash .2s ease-out;
+	-o-animation: flash .2s ease-out;
+	animation: flash .2s ease-out;
+
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1;
+	-ms-animation-iteration-count: 1;
+	-o-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+@keyframes "flash" {
+ 0% {
+    background-color: none;
+ }
+ 50% {
+    background-color: red;
+ }
+ 100% {
+    background-color: none;
+ }
+
 }
 
 @-moz-keyframes flash {
-    0% { background-color:none;}
-    50% { background-color:red;}        
-    100% {background-color:none;}
+ 0% {
+   background-color: none;
+ }
+ 50% {
+   background-color: red;
+ }
+ 100% {
+   background-color: none;
+ }
+
+}
+
+@-webkit-keyframes "flash" {
+ 0% {
+   background-color: none;
+ }
+ 50% {
+   background-color: red;
+ }
+ 100% {
+   background-color: none;
+ }
+
+}
+
+@-ms-keyframes "flash" {
+ 0% {
+   background-color: none;
+ }
+ 50% {
+   background-color: red;
+ }
+ 100% {
+   background-color: none;
+ }
+
+}
+
+@-o-keyframes "flash" {
+ 0% {
+   background-color: none;
+ }
+ 50% {
+   background-color: red;
+ }
+ 100% {
+   background-color: none;
+ }
+
 }
 
 @-ms-keyframes flash {
-    0% { background-color:none;}
-    50% { background-color:red;}        
-    100% {background-color:none;}
+	0%  {
+	 background-color: none;
 }
+ 50% {
+    background-color: red;
+ }
+ 100% {
+    background-color: none;
+ }
