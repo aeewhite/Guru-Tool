@@ -38,7 +38,7 @@
 
 .team {
 	border-radius: 5px;
-	border: 2px solid transparent;
+	border: 2px solid Transparent;
 }
 
 .team input {
@@ -71,4 +71,56 @@
 .infoitem::selection {
 	background-color: Transparent;
 	color: #000;
+}
+.text-center {
+	text-align:center;
+}
+.teamscore {
+	font-size:150%;
+	display:inline-block;
+	padding-top:10px;
+}
+.team .raise {
+	width:30%;
+	text-align:center;
+	padding:10px 10px 10px 10px;
+	float:right;
+}
+.team .lower {
+	width:30%;
+	padding:10px;
+	float:left;
+}
+.boomdaddy {
+	margin-top:30px;
+}
+.flash{
+
+  -moz-animation: flash .2s ease-out;
+  -moz-animation-iteration-count: 1;
+
+  -webkit-animation: flash .2s ease-out;
+  -webkit-animation-iteration-count: 1;
+
+  -ms-animation: flash .2s ease-out;
+  -ms-animation-iteration-count: 1;
+
+}
+
+@-webkit-keyframes flash {
+    0% { background-color:none;}
+    50% { background-color:red;}        
+    100% {background-color:none;}
+}
+
+@-moz-keyframes flash {
+    0% { background-color:none;}
+    50% { background-color:red;}        
+    100% {background-color:none;}
+}
+
+@-ms-keyframes flash {
+    0% { background-color:none;}
+    50% { background-color:red;}        
+    100% {background-color:none;}
 }
