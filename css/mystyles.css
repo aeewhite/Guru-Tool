@@ -100,6 +100,23 @@
 	margin-top: 30px;
 }
 
+.countdown {
+	background-color:#46a546;
+	display:block;
+	margin-top:5%;
+	height:80%;
+	border-top-right-radius: 2px;
+	border-top-left-radius:2px;
+	display:none;
+	padding:0;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+}
+.timerbox {
+	position: relative;
+}
+
 .flash {
 	-webkit-animation: flash .2s ease-out;
 	-moz-animation: flash .2s ease-out;

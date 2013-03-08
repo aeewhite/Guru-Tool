@@ -134,3 +134,38 @@ $(".boomdaddy").click( function() {
       },200);
 	},800);
 });
+
+var teamheight = $(".team").height();
+$(".timerbox").height(teamheight);
+
+var originaltimerheight = $(".countdown").height();
+var timerincrements = originaltimerheight/30;
+
+$(".timeout").click(function () {
+	timer(
+    30000, // milliseconds
+    function(timeleft) { // called every step to update the visible countdown
+        document.getElementById('timer').innerHTML = timeleft+" seconds";
+    },
+    function() { // what to do after
+        $('#timer').empty();
+    }
+		);
+	});
+
+function next () {
+	var newHeight = $(".countdown").outerHeight() - timerincrements;
+	$(".countdown").height(newHeight)
+}
+
+function timer(time,update,complete) {
+    var start = new Date().getTime();
+    var interval = setInterval(function() {
+        var now = time-(new Date().getTime()-start);
+        if( now <= 0) {
+            clearInterval(interval);
+            complete();
+        }
+        else update(Math.floor(now/1000));
+    },100); // the smaller this number, the more accurate the timer will be
+}
