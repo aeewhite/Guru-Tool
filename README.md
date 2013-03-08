@@ -10,8 +10,8 @@ Changelog
 
 ToDo
 ==========
-[x]Basic function (scores and teams)
-[x]Boom Daddy Button
-[x]Basic Timeout
-[ ]Progress Bar of some sort for timeout
-[ ]Boom Daddy Page
+- [x] Basic function (scores and teams)
+- [x] Boom Daddy Button
+- [x] Basic Timeout
+- [ ] Progress Bar of some sort for timeout
+- [ ] Boom Daddy Page
