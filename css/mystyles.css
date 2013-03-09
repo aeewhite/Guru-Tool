@@ -121,6 +121,7 @@
 }
 .boomdaddypage {
 	background-color:black;
+	overflow: hidden;
 }
 .boomdaddypage .container .hero-unit{
 	background-color:#9E1C1C;
