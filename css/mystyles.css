@@ -116,6 +116,44 @@
 .timerbox {
 	position: relative;
 }
+.boomdaddypage {
+	background-color:black;
+}
+.boomdaddypage .container .hero-unit{
+	background-color:#9E1C1C;
+}
+.boomdaddypage .container hr {
+	color:#7A1616;
+	background-color:#7A1616;
+	border-color:#7A1616;
+}
+.bigdaddybutton {
+	font-size:500%;
+}
+.flames {
+	background-image:url(/img/flames.gif);
+	background-repeat:repeat-x;
+	width:100%;
+	position: absolute;
+	bottom:0;
+	height: 200px;
+	overflow: hidden;
+	display: none;
+	z-index:-50;
+}
+.booooom {
+	font-size:100px;
+	color:white;
+	position:absolute;
+	height:150px;
+	text-indent:-3000px;
+	display:none;
+	width:20000px;
+	margin-top:50px;
+}
+
+
+
 
 .flash {
 	-webkit-animation: flash .2s ease-out;

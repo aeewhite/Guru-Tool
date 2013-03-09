@@ -1,4 +1,4 @@
-var words = ["ostensible","austere","ossified","sublime","opine","sully","canard","lionize","jettison","occulde","irascible","cartography","sanguine","vim","efficacy"];
+//If lower score button is pressed, lower score by one
 $(".lower").click(
 	function () {
 		if ( $(this).hasClass("team1") ) {
@@ -38,6 +38,7 @@ $(".lower").click(
 		}
 	}	
 );
+//If raise score button is pressed, raise score by one
 $(".raise").click(
 	function () {
 		if ( $(this).hasClass("team1") ) {
@@ -77,6 +78,7 @@ $(".raise").click(
 		}
 	}	
 );
+//Boom Daddy (penalty) functions, lowers score by one
 $(".boomdaddy").click(
 	function () {
 		if ( $(this).hasClass("team1") ) {
@@ -116,56 +118,66 @@ $(".boomdaddy").click(
 		}
 	}	
 );
+
+//Boom Daddy Flashing animation
 $(".boomdaddy").click( function() {
 	$('body').addClass("flash");
 	setTimeout(function(){
-            $('body').removeClass("flash");
-      },200);
+			$('body').removeClass("flash");
+	  },200);
 	setTimeout(function() {
 		$('body').addClass("flash");
 		setTimeout(function(){
-            $('body').removeClass("flash");
-      },200);
+			$('body').removeClass("flash");
+	  },200);
 	},400);
 	setTimeout(function() {
 		$('body').addClass("flash");
 		setTimeout(function(){
-            $('body').removeClass("flash");
-      },200);
+			$('body').removeClass("flash");
+	  },200);
 	},800);
 });
 
+//Set the height of the div with the timeout button to the same as the others
 var teamheight = $(".team").height();
 $(".timerbox").height(teamheight);
 
-var originaltimerheight = $(".countdown").height();
-var timerincrements = originaltimerheight/30;
 
+
+
+
+//Adding timeou to button click
 $(".timeout").click(function () {
 	timer(
-    30000, // milliseconds
-    function(timeleft) { // called every step to update the visible countdown
-        document.getElementById('timer').innerHTML = timeleft+" seconds";
-    },
-    function() { // what to do after
-        $('#timer').empty();
-    }
+	30000, // milliseconds
+	function(timeleft) { // called every step to update the visible countdown
+		document.getElementById('timer').innerHTML = timeleft+" seconds";
+	},
+	function() { // what to do after
+		$('#timer').empty();
+	}
 		);
 	});
+
+//timer function to be called for the timeout button
+function timer(time,update,complete) {
+	var start = new Date().getTime();
+	var interval = setInterval(function() {
+		var now = time-(new Date().getTime()-start);
+		if( now <= 0) {
+			clearInterval(interval);
+			complete();
+		}
+		else update(Math.floor(now/1000));
+	},100); // the smaller this number, the more accurate the timer will be
+}
+
+//Has to do with the non-implemented progress bar
+var originaltimerheight = $(".countdown").height();
+var timerincrements = originaltimerheight/30;
 
 function next () {
 	var newHeight = $(".countdown").outerHeight() - timerincrements;
 	$(".countdown").height(newHeight)
-}
-
-function timer(time,update,complete) {
-    var start = new Date().getTime();
-    var interval = setInterval(function() {
-        var now = time-(new Date().getTime()-start);
-        if( now <= 0) {
-            clearInterval(interval);
-            complete();
-        }
-        else update(Math.floor(now/1000));
-    },100); // the smaller this number, the more accurate the timer will be
 }
