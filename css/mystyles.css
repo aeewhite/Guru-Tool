@@ -116,6 +116,9 @@
 .timerbox {
 	position: relative;
 }
+.boomhtml {
+	overflow-x:hidden;
+}
 .boomdaddypage {
 	background-color:black;
 }
