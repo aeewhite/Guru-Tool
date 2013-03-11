@@ -5,7 +5,9 @@ This is a simple webapp that was made for my class to for a vocabulary game we p
 
 Changelog
 ==========
-##v1.2##
--Added Timeout Function
+##v1.4##
+-Reworked Guru Draft Tool (now a drag and drop interface)
 ##v1.3##
 -Built Boom Daddy Page
+##v1.2##
+-Added Timeout Function
