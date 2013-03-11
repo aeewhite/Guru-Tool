@@ -4,16 +4,13 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 .span2 {
 	text-align: center;
 }
-
 .info {
 	border-radius: 5px;
 	color: #08C;
 }
-
 .info .available div {
 	height: 25px;
 	line-height: 25px;
@@ -22,157 +19,142 @@
 	padding: 0;
 	border-radius: 5px;
 }
-
 .info .btn {
 	display: block;
 }
-
 .info:nth-child(1) {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
-
 .info div i {
 	margin-top: 5px;
 }
-
 .team {
 	border-radius: 5px;
 	border: 2px solid Transparent;
 }
-
 .team input {
 	width: 100%;
 	margin: 5px 0;
 }
-
 .leader {
 	height: 80px;
 }
-
 .buttons {
 	display: none;
 }
-
 .infoitem {
 	cursor: pointer;
+	width: 100%;
 }
-
 .activeChoice {
 	border-radius: 5px;
 	border: 2px solid green;
 }
-
+.playerdropzone {
+	min-height: 35px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	margin: 5px;
+}
 .infoitem::-moz-selection {
 	background-color: Transparent;
 	color: #000;
 }
-
 .infoitem::selection {
 	background-color: Transparent;
 	color: #000;
 }
-
 .text-center {
 	text-align: center;
 }
-
 .teamscore {
 	font-size: 150%;
 	display: inline-block;
 	padding-top: 10px;
 }
-
 .team .raise {
 	width: 30%;
 	text-align: center;
 	padding: 10px 10px 10px 10px;
 	float: right;
 }
-
 .team .lower {
 	width: 30%;
 	padding: 10px;
 	float: left;
 }
-
 .boomdaddy {
 	margin-top: 30px;
 }
-
 .countdown {
-	background-color:#46a546;
-	display:block;
-	margin-top:5%;
-	height:80%;
+	background-color: #46a546;
+	display: block;
+	margin-top: 5%;
+	height: 80%;
 	border-top-right-radius: 2px;
-	border-top-left-radius:2px;
-	display:none;
-	padding:0;
-	position:absolute;
-	bottom:0px;
-	width:100%;
+	border-top-left-radius: 2px;
+	display: none;
+	padding: 0;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
 }
 .timerbox {
 	position: relative;
 }
 .boomhtml {
-	overflow-x:hidden;
+	-ms-overflow-x: hidden;
+	overflow-x: hidden;
 }
 .boomdaddypage {
-	background-color:black;
+	background-color: black;
 	overflow: hidden;
 }
-.boomdaddypage .container .hero-unit{
-	background-color:#9E1C1C;
+.boomdaddypage .container .hero-unit {
+	background-color: #9E1C1C;
 }
 .boomdaddypage .container hr {
-	color:#7A1616;
-	background-color:#7A1616;
-	border-color:#7A1616;
+	color: #7A1616;
+	background-color: #7A1616;
+	border-color: #7A1616;
 }
 .bigdaddybutton {
-	font-size:500%;
+	font-size: 500%;
 }
 .flames {
-	background-image:url(../img/flames.gif);
-	background-repeat:repeat-x;
-	width:100%;
+	background-image: url(../img/flames.gif);
+	background-repeat: repeat-x;
+	width: 100%;
 	position: absolute;
-	bottom:0;
+	bottom: 0;
 	height: 200px;
 	overflow: hidden;
 	display: none;
-	z-index:-50;
+	z-index: -50;
 }
 .booooom {
-	font-size:100px;
-	color:white;
-	position:absolute;
-	height:150px;
-	text-indent:2000px;
-	display:none;
-	width:20000px;
-	margin-top:50px;
+	font-size: 100px;
+	color: white;
+	position: absolute;
+	height: 150px;
+	text-indent: 2000px;
+	display: none;
+	width: 20000px;
+	margin-top: 50px;
 }
-
-
-
-
 .flash {
 	-webkit-animation: flash .2s ease-out;
 	-moz-animation: flash .2s ease-out;
 	-ms-animation: flash .2s ease-out;
 	-o-animation: flash .2s ease-out;
 	animation: flash .2s ease-out;
-
 	-webkit-animation-iteration-count: 1;
 	-moz-animation-iteration-count: 1;
 	-ms-animation-iteration-count: 1;
 	-o-animation-iteration-count: 1;
 	animation-iteration-count: 1;
 }
-
 @keyframes "flash" {
  0% {
     background-color: none;
@@ -183,9 +165,7 @@
  100% {
     background-color: none;
  }
-
 }
-
 @-moz-keyframes flash {
  0% {
    background-color: none;
@@ -196,9 +176,7 @@
  100% {
    background-color: none;
  }
-
 }
-
 @-webkit-keyframes "flash" {
  0% {
    background-color: none;
@@ -209,36 +187,30 @@
  100% {
    background-color: none;
  }
-
 }
-
 @-ms-keyframes "flash" {
- 0% {
-   background-color: none;
- }
+	0%  {
+	 background-color: none;
+}
  50% {
    background-color: red;
  }
  100% {
    background-color: none;
  }
-
 }
-
-@-o-keyframes "flash" {
- 0% {
-   background-color: none;
- }
+ @-o-keyframes "flash" {
+	0%  {
+	 background-color: none;
+}
  50% {
    background-color: red;
  }
  100% {
    background-color: none;
  }
-
 }
-
-@-ms-keyframes flash {
+ @-ms-keyframes flash {
 	0%  {
 	 background-color: none;
 }

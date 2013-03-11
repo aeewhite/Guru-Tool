@@ -10,8 +10,6 @@ $(".navli").hover(
 
 var students=["Lee Amlung","Clayton Amshoff","Evan Blanford","Spencer Fulkerson","Mark Gumbel","Blake Isaacs","Miles Lee","Chase McGehee","Jack Minogue","Josh Osbourne","Clay Schaefer","Jeb Schilling","Patrick Schwarz","Austin Sullivan","Joe Urda","Andrew White","Karsen Woods","Dean Yoder"];
 
-var teamMembers = " <input type='text' class='member1' > <br> <input type='text' class='member2'> <br> <input type='text' class='member3'> <br> <input type='text' class='member4'> <br> ";
-
 var lastUsed;
 
 function teamLeader (leaderNumber,className){
@@ -43,22 +41,21 @@ $('.leader5button').click( function () {
 	teamLeader('leader5','.leader5');
 	$('.team1').addClass('activeChoice');
 	for (var i = 0; i < 4; i++) {
-				$('.leader').after('<input type="text" class="member'+ i +'">')
+				$('.leader').after('<div class="member' + i + ' playerdropzone" ondrop="drop(event)" ondragover="allowDrop(event)" >')
 			};
 	$('.buttons').slideDown();
-	$('.team1 .member3').focus();
+	// $('.team1 .member3').focus();
 });
 
 
 function infoBar() {
 	$('.infoitem').remove();
 	for (var i = 0; i < students.length; i++) {
-		$(".info").append('<div class="' + students[i] + ' infoitem btn ' + i + '" onclick="students.splice(' + i + ', 1); infoBar(); lastUsed = this"><i class="icon-remove-sign pull-left"></i>' + students[i] + '</div>');
-	}
+		$(".info").append('<div class="' + students[i] + ' infoitem btn ' + i + '" id="student' + i + '"  draggable="true" ondragstart="drag(event)">' + students[i] + '</div>');
+	}	
 }
 
-$('.next').click( 
-	function advanceTeamSelection () {
+function advanceTeamSelection () {
 		$('.activeChoice').removeClass('.activeChoice');
 		var current = $('.activeChoice');
 		next = current.next('div');
@@ -68,11 +65,12 @@ $('.next').click(
 		current.removeClass('activeChoice');  // move the current class
 		next.addClass('activeChoice');
 		$('.activeChoice input').filter(function() { return this.value == ""; }).first().focus();
-		console.log('called_n')
-	});
-
-$('.previous').click( 
-	function goBack () {
+		$('.info').height('auto');
+		var h = $('.info').height();
+		$('.info').height(h + 20);
+		console.log('called_n');
+	}
+function goBack () {
 		$('.activeChoice').removeClass('.activeChoice');
 		var current = $('.activeChoice');
 		previous = current.prev('.team');
@@ -83,7 +81,39 @@ $('.previous').click(
 		previous.addClass('activeChoice');
 		$('.activeChoice input').filter(function() { return this.value != ""; }).last().focus();
 		$('.info').append( lastUsed );
+	}
+$('.next').click( 
+	function () {
+		advanceTeamSelection();
 	});
 
+$('.previous').click( 
+	function () {
+		goBack();
+	});
+
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+
+function drag(ev) {
+	ev.dataTransfer.setData("Text",ev.target.id);
+
+}
+
+function drop(ev) {
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	ev.target.appendChild(document.getElementById(data));
+	advanceTeamSelection();
+}
+function dropnoadvance(ev) {
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	ev.target.appendChild(document.getElementById(data));
+	goBack();
+}
+
 infoBar();
+
 console.log("Why are you even looking at the JavaScript Console? It is for me, not you.")
