@@ -8,7 +8,7 @@ $(".navli").hover(
 	}
 );
 
-var students=["Lee Amlung","Clayton Amshoff","Evan Blanford","Spencer Fulkerson","Mark Gumbel","Blake Isaacs","Miles Lee","Chase McGehee","Jack Minogue","Josh Osbourne","Clay Schaefer","Jeb Schilling","Patrick Schwarz","Austin Sullivan","Joe Urda","Andrew White","Karsen Woods","Dean Yoder"];
+var students=["Lee Amlung","Clayton Amshoff","Evan Blanford","Spencer Fulkerson","Mark Gumbel","Blake Isaacs","Miles Lee","Chase McGehee","Jack Minogue","Josh Osborne","Clay Schaefer","Jeb Schilling","Patrick Schwarz","Austin Sullivan","Joe Urda","Andrew White","Karsen Woods","Dean Yoder"];
 
 var lastUsed;
 
