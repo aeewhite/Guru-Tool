@@ -156,6 +156,10 @@ $(".timeout").click(function () {
 	},
 	function() { // what to do after
 		$('#timer').empty();
+		$('body').addClass("flash");
+		setTimeout(function(){
+			$('body').removeClass("flash");
+	  },200);
 	}
 		);
 	});
@@ -174,10 +178,10 @@ function timer(time,update,complete) {
 }
 
 //Has to do with the non-implemented progress bar
-var originaltimerheight = $(".countdown").height();
-var timerincrements = originaltimerheight/30;
+// var originaltimerheight = $(".countdown").height();
+// var timerincrements = originaltimerheight/30;
 
-function next () {
-	var newHeight = $(".countdown").outerHeight() - timerincrements;
-	$(".countdown").height(newHeight)
-}
+// function next () {
+// 	var newHeight = $(".countdown").outerHeight() - timerincrements;
+// 	$(".countdown").height(newHeight)
+// }
