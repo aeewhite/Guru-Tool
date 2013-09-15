@@ -116,4 +116,4 @@ function dropnoadvance(ev) {
 
 infoBar();
 
-console.log("Why are you even looking at the JavaScript Console? It is for me, not you.")
+console.log("Why are you even looking at my JavaScript Console? It is for me, not you.")
